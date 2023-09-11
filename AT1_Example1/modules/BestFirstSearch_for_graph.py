@@ -154,4 +154,4 @@ class AStar_algorithm_for_graph:
         You need to specify the h function when you call astar_search, or
         else in your Problem subclass."""
         h = memoize(self.h or problem.h, 'h')
-        return self.best_first_graph_search_for_vis(problem, lambda n: n.path_cost + 1.5 * h(n))
+        return self.best_first_graph_search_for_vis(problem, lambda n: n.path_cost + 2 * h(n))
