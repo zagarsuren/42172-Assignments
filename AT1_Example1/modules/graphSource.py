@@ -43,7 +43,7 @@ def define_graph(neighbour = None, location = None):
     node_positions = graph.locations
     position_v = [x[1] for k, x in graph.locations.items()]
     max_v = max(position_v)
-    # changed max_v/500 to max_v/150
+    # changed max_v/500 to max_v/153
     node_label_pos = { k:[v[0],v[1]-10*(max_v/153.)]  for k,v in graph.locations.items() }
     edge_weights = {(k, k2) : v2 for k, v in graph.graph_dict.items() for k2, v2 in v.items()}
 
